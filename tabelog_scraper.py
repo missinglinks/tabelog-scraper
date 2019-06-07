@@ -105,8 +105,10 @@ class TabelogScraper:
             if error:
                 break
 
-            links = soup.find_all("div", { "class": "rvw-simple-item" })
+            links = soup.find_all("div", { "class": "rvw-item" })
+            #print(len(links))
             comment_links += [ x["data-detail-url"] for x in links ]
+            #print(comment_links)
             
             if len(links) < 90:
                 break
@@ -164,7 +166,7 @@ class TabelogScraper:
 
 
 def _iter_area_list(area_list_filepath):
-    df = pd.read_csv(area_list_filepath, sep="\t")
+    df = pd.read_csv(area_list_filepath, sep=",")
     print(area_list_filepath)
     areas = json.loads(df.to_json(orient="records"))
     for area in areas:
