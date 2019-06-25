@@ -2,7 +2,7 @@
 
 Simple webscraper for tabelog user reviews.
 
-## Usage
+### Usage
 
 1. Download repo
 
@@ -22,7 +22,7 @@ $ pip install -r requirements.txt
 $ python tabelog_scraper.py
 ```
 
-## Elasticsearch ingest
+### Elasticsearch ingest
 
 1. Create config.py
 
@@ -37,3 +37,7 @@ ES_SERVER = "http://user:pwd@1.1.1.1:9200"
 ```
 $ python elasticsearch_ingest.py <comments_dir>
 ```
+
+### License
+
+GNU General Public License v3.0
